@@ -1,0 +1,18 @@
+legend,label{
+    font-style: normal;
+    font-weight: bold;
+}
+
+p{
+    text-align: left;
+    width: 300px; 
+    font-family: fantasy
+        
+}
+
+#restaurante{
+    
+    margin-left: 18px;
+   border-bottom-color: greenyellow
+      
+}
