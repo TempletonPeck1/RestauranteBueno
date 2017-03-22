@@ -36,6 +36,7 @@ public class ServletMostrarCocinero extends HttpServlet {
                 out.println("<p>---------------------------------------------------------------</p>");
                 //out.println("<br/>");
             }
+            out.println("<a href='index.htm'>"+"Volver al inicio"+"</a>");
             out.println("</body>");
             out.println("</html>");
 

@@ -17,9 +17,8 @@ public class ServletMostrarCamarero extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, ClassNotFoundException, SQLException {
 
-       
-        ResultSet  lista_camareros=DaoCamarero.mostrarCamarero();
-        
+        ResultSet lista_camareros = DaoCamarero.mostrarCamarero();
+
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
@@ -37,10 +36,10 @@ public class ServletMostrarCamarero extends HttpServlet {
                 out.println("<p>---------------------------------------------------------------</p>");
                 //out.println("<br/>");
             }
+            out.println("<a href='index.htm'>"+"Volver al inicio"+"</a>");
             out.println("</body>");
             out.println("</html>");
 
-           
         }
     }
 
