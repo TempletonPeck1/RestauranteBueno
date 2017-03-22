@@ -1,13 +1,9 @@
 package dao.cocinero.restaurante;
 
-import entidades.Cocinero;
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import utilidades.Conexion;
 
 public class DaoCocinero {
@@ -20,7 +16,8 @@ public class DaoCocinero {
         consultaSQL += "('" + idCocinero + "','" + nombre + "','" + apellido + "','" + especialidad + "')";
         sentencia.executeUpdate(consultaSQL);
         sentencia.close();
-        conexion.close();
+        Conexion.cerrarConexion();
+
     }
 
     public static ResultSet mostrarCocinero() throws ClassNotFoundException, SQLException {
@@ -33,7 +30,7 @@ public class DaoCocinero {
 
     }
 
-    public static void procesarPeticionCocinero(HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException, IOException {
+   /* public static void procesarPeticionCocinero(HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException, IOException {
 
         Cocinero cook = new Cocinero();
         cook.setIdCocinero(Integer.parseInt(request.getParameter("idCocinero")));
@@ -44,5 +41,5 @@ public class DaoCocinero {
         insertarCocinero(cook.getIdCocinero(), cook.getNombre(), cook.getApellido(), cook.getEspecialidad());
         response.sendRedirect("ServletMostrarCocinero");
 
-    }
+    }*/
 }

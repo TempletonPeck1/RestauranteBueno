@@ -1,4 +1,4 @@
-package ejemploServlet;
+package controladoresServlet;
 
 import dao.camarero.restaurante.DaoCamarero;
 import java.io.IOException;

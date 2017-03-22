@@ -3,31 +3,31 @@
     <display-name>RestauranteBueno</display-name>
     <servlet>
         <servlet-name>ServletInsertarCocinero</servlet-name>
-        <servlet-class>ejemploServlet.ServletInsertarCocinero</servlet-class>
+        <servlet-class>controladoresServlet.ServletInsertarCocinero</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ServletMostrarCocinero</servlet-name>
-        <servlet-class>ejemploServlet.ServletMostrarCocinero</servlet-class>
+        <servlet-class>controladoresServlet.ServletMostrarCocinero</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>LogRestaurante</servlet-name>
-        <servlet-class>ejemploServlet.LogRestaurante</servlet-class>
+        <servlet-class>controladoresServlet.LogRestaurante</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>VerSession</servlet-name>
-        <servlet-class>ejemploServlet.VerSession</servlet-class>
+        <servlet-class>controladoresServlet.VerSession</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>CrearSession</servlet-name>
-        <servlet-class>ejemploServlet.CrearSession</servlet-class>
+        <servlet-class>controladoresServlet.CrearSession</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ServletInsertarAdministrador</servlet-name>
-        <servlet-class>ejemploServlet.ServletInsertarAdministrador</servlet-class>
+        <servlet-class>controladoresServlet.ServletInsertarAdministrador</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ServletMostrarAdministrador</servlet-name>
-        <servlet-class>ejemploServlet.ServletMostrarAdministrador</servlet-class>
+        <servlet-class>controladoresServlet.ServletMostrarAdministrador</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletInsertarCamarero</servlet-name>
@@ -35,11 +35,11 @@
     </servlet-mapping>
     <servlet>
         <servlet-name>ServletInsertarCamarero</servlet-name>
-        <servlet-class>ejemploServlet.ServletInsertarCamarero</servlet-class>
+        <servlet-class>controladoresServlet.ServletInsertarCamarero</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>ServletMostrarCamarero</servlet-name>
-        <servlet-class>ejemploServlet.ServletMostrarCamarero</servlet-class>
+        <servlet-class>controladoresServlet.ServletMostrarCamarero</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>ServletInsertarCamarero</servlet-name>
