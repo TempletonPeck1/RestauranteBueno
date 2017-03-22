@@ -18,9 +18,7 @@ public class ServletMostrarCamarero extends HttpServlet {
             throws ServletException, IOException, ClassNotFoundException, SQLException {
 
        
-        ResultSet rs = null;
-        
-        rs = DaoCamarero.mostrarCamarero();
+        ResultSet lista_camareros=DaoCamarero.mostrarCamarero();
         
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
@@ -32,10 +30,10 @@ public class ServletMostrarCamarero extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Listado de Camareros</h1>");
-            while (rs.next()) {
-                out.println("<p>" + rs.getString("idCamarero") + "</p>");
-                out.println("<p>" + rs.getString("nombre") + " " + rs.getString("apellido") + "</p>");
-                out.println("<p>" + rs.getString("especialidad") + "</p>");
+            while (lista_camareros.next()) {
+                out.println("<p>" + lista_camareros.getString("idCamarero") + "</p>");
+                out.println("<p>" + lista_camareros.getString("nombre") + " " + lista_camareros.getString("apellido") + "</p>");
+                out.println("<p>" + lista_camareros.getString("especialidad") + "</p>");
                 out.println("<p>---------------------------------------------------------------</p>");
                 //out.println("<br/>");
             }
