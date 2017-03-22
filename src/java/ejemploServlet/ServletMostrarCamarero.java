@@ -18,7 +18,7 @@ public class ServletMostrarCamarero extends HttpServlet {
             throws ServletException, IOException, ClassNotFoundException, SQLException {
 
        
-        ResultSet lista_camareros=DaoCamarero.mostrarCamarero();
+        ResultSet  lista_camareros=DaoCamarero.mostrarCamarero();
         
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
