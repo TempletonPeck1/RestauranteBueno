@@ -1,6 +1,7 @@
 package dao.camarero.restaurante;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -32,6 +33,28 @@ public class DaoCamarero {
         return lista_camareros;
 
     }
+
+    public static void actualizarCamarero(String idCamarero, String nombre, String apellido, String especialidad) throws ClassNotFoundException, SQLException {
+
+        Connection conexion = Conexion.abrirConexion();
+        Statement sentencia = conexion.createStatement();
+
+        String consultaSQL = "update camarero set nombre=?, apellido=?, especialidad=? where idCamarero=?";
+        PreparedStatement actualizar = conexion.prepareStatement(consultaSQL);
+        //los numeros son la posicion de la consulta SQL
+        actualizar.setString(1, nombre);
+        actualizar.setString(2, apellido);
+        actualizar.setString(3, especialidad);
+        actualizar.setString(4, idCamarero);
+        //Execute update devuelve el numero de filas afectadas
+        int filasAfectadas = actualizar.executeUpdate(consultaSQL);
+        System.out.println("Filas afectadas: " + filasAfectadas);
+        actualizar.close();
+        conexion.close();
+
+    }
+
 }
+
 
 //Faltan metodos update y delete

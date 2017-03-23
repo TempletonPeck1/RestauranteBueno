@@ -10,7 +10,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import utilidades.Conexion;
 
-
 public class DaoAdministrador {
 
     public static void insertarAdministrador(String usuario, String password, String nombre_administrador, String apellido_administrador) throws ClassNotFoundException, SQLException {
@@ -25,8 +24,7 @@ public class DaoAdministrador {
         Conexion.cerrarConexion();
 
     }
-    
-    
+
     public static ResultSet mostrarAdministrador() throws ClassNotFoundException, SQLException {
 
         Connection conexion = Conexion.abrirConexion();
@@ -37,12 +35,9 @@ public class DaoAdministrador {
         return lista_administradores;
 
     }
-    
-    
 
     public static void procesarPeticionAdministrador(HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException, IOException {
 
-        
         Administrador admin = new Administrador();
         admin.setUsuarioAdministrador(request.getParameter("usuario_administrador"));
         admin.setPasswordAdministrador(request.getParameter("password_administrador"));
@@ -50,7 +45,8 @@ public class DaoAdministrador {
         admin.setApellidoAdministrador(request.getParameter("apellido_administrador"));
 
         insertarAdministrador(admin.getUsuarioAdministrador(), admin.getPasswordAdministrador(), admin.getNombreAdministrador(), admin.getApellidoAdministrador());
-        response.sendRedirect("ServletMostrarAdministrador");
+        response.sendRedirect("login.html");
+        //response.sendRedirect("ServletMostrarAdministradores");
     }
 
 }

@@ -1,6 +1,7 @@
 package dao.cocinero.restaurante;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -30,16 +31,22 @@ public class DaoCocinero {
 
     }
 
-   /* public static void procesarPeticionCocinero(HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException, IOException {
+    public static void actualizarCocinero(int idCocinero, String nombre, String apellido, String especialidad) throws ClassNotFoundException, SQLException {
 
-        Cocinero cook = new Cocinero();
-        cook.setIdCocinero(Integer.parseInt(request.getParameter("idCocinero")));
-        cook.setNombre(request.getParameter("nombre"));
-        cook.setApellido(request.getParameter("apellido"));
-        cook.setEspecialidad(request.getParameter("especialidad"));
+        Connection conexion = Conexion.abrirConexion();
+        Statement sentencia = conexion.createStatement();
 
-        insertarCocinero(cook.getIdCocinero(), cook.getNombre(), cook.getApellido(), cook.getEspecialidad());
-        response.sendRedirect("ServletMostrarCocinero");
+        String consultaSQL = "update cocinero set nombre=?, apellido=?, especialidad=? where idCocinero=?";
+        PreparedStatement actualizar = conexion.prepareStatement(consultaSQL);
+        //los numeros son la posicion de la consulta SQL
+        actualizar.setString(1, nombre);
+        actualizar.setString(2, apellido);
+        actualizar.setString(3, especialidad);
+        actualizar.setInt(4, idCocinero);
+        //Execute update devuelve el numero de filas afectadas
+        int filasAfectadas = actualizar.executeUpdate(consultaSQL);
+        System.out.println("Filas afectadas: " + filasAfectadas);
 
-    }*/
+    }
+
 }

@@ -1,84 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <display-name>RestauranteBueno</display-name>
-    <servlet>
-        <servlet-name>ServletInsertarCocinero</servlet-name>
-        <servlet-class>controladoresServlet.ServletInsertarCocinero</servlet-class>
+  
+    <!--CONTROLADOR COCINERO-->  
+     <servlet>
+        <servlet-name>ControladorServletCocinero</servlet-name>
+        <servlet-class>controladoresServlet.ControladorServletCocinero</servlet-class>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>ControladorServletCocinero</servlet-name>
+        <url-pattern>/ControladorServletCocinero</url-pattern>
+    </servlet-mapping>
+    
+     <!--CONTROLADOR CAMARERO-->  
+     <servlet>
+        <servlet-name>ControladorServletCamarero</servlet-name>
+        <servlet-class>controladoresServlet.ControladorServletCamarero</servlet-class>
+    </servlet>
+     <servlet-mapping>
+        <servlet-name>ControladorServletCamarero</servlet-name>
+        <url-pattern>/ControladorServletCamarero</url-pattern>
+    </servlet-mapping>
+    
+    <!--CONTROLADOR ADMINISTRADOR--> 
+    <servlet>
+        <servlet-name>ControladorServletAdministrador</servlet-name>
+        <servlet-class>controladoresServlet.ControladorServletAdministrador</servlet-class>
+    </servlet>
+     <servlet-mapping>
+        <servlet-name>ControladorServletAdministrador</servlet-name>
+        <url-pattern>/ControladorServletAdministrador</url-pattern>
+    </servlet-mapping>
+    
+    <!--MOSTRAR COCINERO-->  
     <servlet>
         <servlet-name>ServletMostrarCocinero</servlet-name>
         <servlet-class>controladoresServlet.ServletMostrarCocinero</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>LogRestaurante</servlet-name>
-        <servlet-class>controladoresServlet.LogRestaurante</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>VerSession</servlet-name>
-        <servlet-class>controladoresServlet.VerSession</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>CrearSession</servlet-name>
-        <servlet-class>controladoresServlet.CrearSession</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ServletInsertarAdministrador</servlet-name>
-        <servlet-class>controladoresServlet.ServletInsertarAdministrador</servlet-class>
-    </servlet>
-    <servlet>
-        <servlet-name>ServletMostrarAdministrador</servlet-name>
-        <servlet-class>controladoresServlet.ServletMostrarAdministrador</servlet-class>
-    </servlet>
     <servlet-mapping>
-        <servlet-name>ServletInsertarCamarero</servlet-name>
-        <url-pattern>/ServletInsertarCamarero</url-pattern>
+        <servlet-name>ServletMostrarCocinero</servlet-name>
+        <url-pattern>/ServletMostrarCocinero</url-pattern>
     </servlet-mapping>
-    <servlet>
-        <servlet-name>ServletInsertarCamarero</servlet-name>
-        <servlet-class>controladoresServlet.ServletInsertarCamarero</servlet-class>
-    </servlet>
+    
+    <!--MOSTRAR CAMARERO-->  
     <servlet>
         <servlet-name>ServletMostrarCamarero</servlet-name>
         <servlet-class>controladoresServlet.ServletMostrarCamarero</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ServletInsertarCamarero</servlet-name>
-        <url-pattern>/ServletInsertarCamarero</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
         <servlet-name>ServletMostrarCamarero</servlet-name>
         <url-pattern>/ServletMostrarCamarero</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ServletInsertarCocinero</servlet-name>
-        <url-pattern>/ServletInsertarCocinero</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ServletMostrarCocinero</servlet-name>
-        <url-pattern>/ServletMostrarCocinero</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>LogRestaurante</servlet-name>
-        <url-pattern>/LogRestaurante</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>VerSession</servlet-name>
-        <url-pattern>/VerSession</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>CrearSession</servlet-name>
-        <url-pattern>/CrearSession</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>ServletInsertarAdministrador</servlet-name>
-        <url-pattern>/ServletInsertarAdministrador</url-pattern>
-    </servlet-mapping>
+    
+    <!--MOSTRAR ADMINISTRADOR-->
+    <servlet>
+        <servlet-name>ServletMostrarAdministrador</servlet-name>
+        <servlet-class>controladoresServlet.ServletMostrarAdministrador</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletMostrarAdministrador</servlet-name>
         <url-pattern>/ServletMostrarAdministrador</url-pattern>
     </servlet-mapping>
+  
+    <!--LOGRESTAURANTE-->  
+    <servlet>
+        <servlet-name>LogRestaurante</servlet-name>
+        <servlet-class>controladoresServlet.LogRestaurante</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogRestaurante</servlet-name>
+        <url-pattern>/LogRestaurante</url-pattern>
+    </servlet-mapping>
+    
+    <!--VERSESSION-->  
+    <servlet>
+        <servlet-name>VerSession</servlet-name>
+        <servlet-class>controladoresServlet.VerSession</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>VerSession</servlet-name>
+        <url-pattern>/VerSession</url-pattern>
+    </servlet-mapping>
+    
+    <!--CREARSESSION--> 
+    <servlet>
+        <servlet-name>CrearSession</servlet-name>
+        <servlet-class>controladoresServlet.CrearSession</servlet-class>
+    </servlet>
+     <servlet-mapping>
+        <servlet-name>CrearSession</servlet-name>
+        <url-pattern>/CrearSession</url-pattern>
+    </servlet-mapping>
+    
     <welcome-file-list>
-        <welcome-file>FormularioCamarero.html</welcome-file>
+        <welcome-file>index.htm</welcome-file>
     </welcome-file-list>
     <!--<session-config>
         <session-timeout>

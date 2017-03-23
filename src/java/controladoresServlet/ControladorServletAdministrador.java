@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-public class ServletInsertarAdministrador extends HttpServlet {
+public class ControladorServletAdministrador extends HttpServlet {
 
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -65,9 +65,9 @@ public class ServletInsertarAdministrador extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(ServletInsertarAdministrador.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ControladorServletAdministrador.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(ServletInsertarAdministrador.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ControladorServletAdministrador.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -85,9 +85,9 @@ public class ServletInsertarAdministrador extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(ServletInsertarAdministrador.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ControladorServletAdministrador.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(ServletInsertarAdministrador.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ControladorServletAdministrador.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

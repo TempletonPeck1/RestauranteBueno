@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class ServletInsertarCocinero extends HttpServlet {
+public class ControladorServletCocinero extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException, ClassNotFoundException {
@@ -27,9 +27,9 @@ public class ServletInsertarCocinero extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(ServletInsertarCocinero.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ControladorServletCocinero.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(ServletInsertarCocinero.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ControladorServletCocinero.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -39,9 +39,9 @@ public class ServletInsertarCocinero extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(ServletInsertarCocinero.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ControladorServletCocinero.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
-            Logger.getLogger(ServletInsertarCocinero.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(ControladorServletCocinero.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
