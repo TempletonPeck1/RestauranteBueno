@@ -45,8 +45,8 @@ public class DaoAdministrador {
         admin.setApellidoAdministrador(request.getParameter("apellido_administrador"));
 
         insertarAdministrador(admin.getUsuarioAdministrador(), admin.getPasswordAdministrador(), admin.getNombreAdministrador(), admin.getApellidoAdministrador());
-        response.sendRedirect("login.html");
-        //response.sendRedirect("ServletMostrarAdministradores");
+        //response.sendRedirect("login.html");
+        response.sendRedirect("ServletMostrarAdministrador");
     }
 
 }
