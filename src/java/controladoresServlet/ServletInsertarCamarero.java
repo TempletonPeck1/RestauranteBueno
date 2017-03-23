@@ -1,6 +1,6 @@
 package controladoresServlet;
 
-import dao.camarero.restaurante.DaoCamarero;
+import bo.camarero.restaurante.BoCamarero;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -24,7 +24,7 @@ public class ServletInsertarCamarero extends HttpServlet {
         boolean log = (boolean) misession.getAttribute("ok");
 
         if (log == true) {
-            DaoCamarero.procesarPeticionCamarero(request, response);
+            BoCamarero.procesarPeticionCamarero(request, response);
         } else {
             response.sendRedirect("login.html");
         }

@@ -1,7 +1,7 @@
 
 package bo.cocinero.restaurante;
 
-import static dao.cocinero.restaurante.DaoCocinero.insertarCocinero;
+import dao.cocinero.restaurante.DaoCocinero;
 import entidades.Cocinero;
 import java.io.IOException;
 import java.sql.SQLException;
@@ -19,7 +19,7 @@ public class BoCocinero {
         cook.setApellido(request.getParameter("apellido"));
         cook.setEspecialidad(request.getParameter("especialidad"));
 
-        insertarCocinero(cook.getIdCocinero(), cook.getNombre(), cook.getApellido(), cook.getEspecialidad());
+        DaoCocinero.insertarCocinero(cook.getIdCocinero(), cook.getNombre(), cook.getApellido(), cook.getEspecialidad());
         response.sendRedirect("ServletMostrarCocinero");
 
     }

@@ -1,12 +1,9 @@
 package dao.camarero.restaurante;
 
-import entidades.Camarero;
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import utilidades.Conexion;
 
@@ -34,18 +31,6 @@ public class DaoCamarero {
         //Conexion.cerrarConexion();
         return lista_camareros;
 
-    }
-
-    public static void procesarPeticionCamarero(HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException, IOException {
-
-        Camarero waiter = new Camarero();
-        waiter.setIdCamarero(request.getParameter("idCamarero"));
-        waiter.setNombre(request.getParameter("nombre"));
-        waiter.setApellido(request.getParameter("apellido"));
-        waiter.setEspecialidad(request.getParameter("especialidad"));
-
-        insertarCamarero(waiter.getIdCamarero(), waiter.getNombre(), waiter.getApellido(), waiter.getEspecialidad());
-        response.sendRedirect("ServletMostrarCamarero");
     }
 }
 
