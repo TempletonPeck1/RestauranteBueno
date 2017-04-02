@@ -4,16 +4,20 @@ package entidades;
 
 public class Camarero {
     
-    private String idCamarero;
+    private int idCamarero;
     private String nombre;
     private String apellido;
     private String especialidad;
 
-    public String getIdCamarero() {
+    public Camarero() {
+    }
+
+    
+    public int getIdCamarero() {
         return idCamarero;
     }
 
-    public void setIdCamarero(String idCamarero) {
+    public void setIdCamarero(int idCamarero) {
         this.idCamarero = idCamarero;
     }
 
@@ -40,6 +44,8 @@ public class Camarero {
     public void setEspecialidad(String especialidad) {
         this.especialidad = especialidad;
     }
+
+    
     
     
     

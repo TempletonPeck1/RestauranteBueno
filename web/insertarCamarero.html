@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+    <head>
 
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Alta Camarero</title>
+        <title>Alta de  Camareros</title>
 
-	<link rel="stylesheet" href="assets/demo.css">
-	<link rel="stylesheet" href="assets/form-register.css">
+        <link rel="stylesheet" href="assets/demo.css">
+        <link rel="stylesheet" href="assets/form-register.css">
 
-</head>
+    </head>
     <ul>
-        <li><a href="index.htm">Indice</a></li>
-        <li><a href="registroCamarero.html" class="active">Alta Camarero</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="form-mini.html">Mini</a></li>
-        <li><a href="form-labels-on-top.html">Labels on Top</a></li>
-        <li><a href="form-validation.html">Validation</a></li>
-        <li><a href="form-search.html">Search</a></li>
+        <li><a href="gestion.htm">Indice</a></li>
+        <li><a href="insertarCamarero.html" class="active">Dar de Alta</a></li>
+        <li><a href="mostrarCamarero.jsp">Listado de Camareros</a></li>
+        <li><a href="actualizarCamarero.html">Actualizar datos</a></li>
+        <li><a href="borrarCamarero.html">Dar de Baja</a></li>
+
     </ul>
 
 
@@ -35,13 +34,13 @@
                 <div class="form-white-background">
 
                     <div class="form-title-row">
-                        <h1>Alta Camarero</h1>
+                        <h1>Alta de Camareros</h1>
                     </div>
 
                     <div class="form-row">
                         <label>
                             <span>IdCamarero</span>
-                            <input type="text" name="idCamarero">
+                            <input type="int" name="idCamarero">
                         </label>
                     </div>
 
@@ -58,8 +57,8 @@
                             <input type="text" name="apellido">
                         </label>
                     </div>
-                    
-                       <div class="form-row">
+
+                    <div class="form-row">
                         <label>
                             <span>Especialidad</span>
                             <select id="especialidad" name="especialidad">
@@ -68,6 +67,11 @@
                                 <option>Terraza</option>
                             </select>
                         </label>
+                    </div>
+
+                    <!--Paso un valor oculto al controlador (insertar)-->
+                    <div class="form-row">     
+                        <input type="hidden" name="action" value="insertar">
                     </div>
 
                     <div class="form-row">
@@ -90,12 +94,12 @@
             <div class="form-sign-in-with-social">
 
                 <div class="form-row form-title-row">
-                    <span class="form-title">Menu Administracion</span>
+                    <span class="form-title">Contacto</span>
                 </div>
 
-                <a href="#" class="form-google-button">Baja Camarero</a>
-                <a href="#" class="form-facebook-button">Buscar</a>
-                <a href="#" class="form-twitter-button">Actualizar Camarero</a>
+                <a href="#" class="form-google-button">Google</a>
+                <a href="#" class="form-facebook-button">Facebook</a>
+                <a href="#" class="form-twitter-button">Twitter</a>
 
             </div>
 

@@ -31,7 +31,7 @@ public class LogRestaurante extends HttpServlet {
             sesion_login.setAttribute("login_password", password);
             sesion_login.setAttribute("ok", log);
 
-            response.sendRedirect("altas.htm");
+            response.sendRedirect("gestion.htm");
 
         } else {
             response.sendRedirect("login.html");

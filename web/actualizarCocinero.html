@@ -1,26 +1,25 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+    <head>
 
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Alta Cocinero</title>
+        <title>Actualizacion de Cocineros</title>
 
-	<link rel="stylesheet" href="assets/demo.css">
-	<link rel="stylesheet" href="assets/form-register.css">
+        <link rel="stylesheet" href="assets/demo.css">
+        <link rel="stylesheet" href="assets/form-register.css">
 
-</head>
+    </head>
     <ul>
-        <li><a href="index.htm">Index</a></li>
-        <li><a href="registroCocinero.html" class="active">Alta Cocinero</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="form-mini.html">Mini</a></li>
-        <li><a href="form-labels-on-top.html">Labels on Top</a></li>
-        <li><a href="form-validation.html">Validation</a></li>
-        <li><a href="form-search.html">Search</a></li>
+        <li><a href="gestion.htm">Indice</a></li>
+        <li><a href="insertarCocinero.html">Dar de Alta</a></li>
+        <li><a href="mostrarCocinero.jsp">Listado de Cocineros</a></li>
+        <li><a href="actualizarCocinero.html" class="active">Actualizar datos</a></li>
+        <li><a href="borrarCocinero.html">Dar de Baja</a></li>
+
     </ul>
 
 
@@ -35,14 +34,7 @@
                 <div class="form-white-background">
 
                     <div class="form-title-row">
-                        <h1>Alta Cocinero</h1>
-                    </div>
-
-                    <div class="form-row">
-                        <label>
-                            <span>IdCocinero</span>
-                            <input type="text" name="idCocinero">
-                        </label>
+                        <h1>Actualizacion de Cocineros</h1>
                     </div>
 
                     <div class="form-row">
@@ -58,8 +50,8 @@
                             <input type="text" name="apellido">
                         </label>
                     </div>
-                    
-                     <div class="form-row">
+
+                    <div class="form-row">
                         <label>
                             <span>Especialidad</span>
                             <select id="especialidad" name="especialidad">
@@ -67,6 +59,18 @@
                                 <option>Cocina Tradicional</option>              
                             </select>
                         </label>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>IdCocinero</span>
+                            <input type="int" name="idCocinero">
+                        </label>
+                    </div>
+
+                    <!--Paso un valor oculto al controlador (actualizar)-->
+                    <div class="form-row">     
+                        <input type="hidden" name="action" value="actualizar">
                     </div>
 
                     <div class="form-row">
@@ -89,12 +93,12 @@
             <div class="form-sign-in-with-social">
 
                 <div class="form-row form-title-row">
-                    <span class="form-title">Menu Administracion</span>
+                    <span class="form-title">Contacto</span>
                 </div>
 
-                <a href="#" class="form-google-button">Baja Cocinero</a>
-                <a href="#" class="form-facebook-button">Buscar</a>
-                <a href="#" class="form-twitter-button">Actualizar Cocinero</a>
+                <a href="#" class="form-google-button">Google</a>
+                <a href="#" class="form-facebook-button">Facebook</a>
+                <a href="#" class="form-twitter-button">Twitter</a>
 
             </div>
 

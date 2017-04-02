@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Alta Camarero</title>
+	<title>Actualizaciones Camarero</title>
 
 	<link rel="stylesheet" href="assets/demo.css">
 	<link rel="stylesheet" href="assets/form-register.css">
@@ -15,12 +15,12 @@
 </head>
     <ul>
         <li><a href="index.htm">Indice</a></li>
-        <li><a href="registroCamarero.html" class="active">Alta Camarero</a></li>
+        <li><a href="insertarCamarero.html" class="active">Actualizar Camarero</a></li>
         <li><a href="login.html">Login</a></li>
-        <li><a href="form-mini.html">Mini</a></li>
+       <!--<li><a href="form-mini.html">Mini</a></li>
         <li><a href="form-labels-on-top.html">Labels on Top</a></li>
         <li><a href="form-validation.html">Validation</a></li>
-        <li><a href="form-search.html">Search</a></li>
+        <li><a href="form-search.html">Search</a></li>-->
     </ul>
 
 
@@ -35,14 +35,7 @@
                 <div class="form-white-background">
 
                     <div class="form-title-row">
-                        <h1>Alta Camarero</h1>
-                    </div>
-
-                    <div class="form-row">
-                        <label>
-                            <span>IdCamarero</span>
-                            <input type="text" name="idCamarero">
-                        </label>
+                        <h1>Actualizar Camarero</h1>
                     </div>
 
                     <div class="form-row">
@@ -69,6 +62,19 @@
                             </select>
                         </label>
                     </div>
+                    
+                    
+                    
+                    <div class="form-row">
+                        <label>
+                            <span>IdCamarero</span>
+                            <input type="text" name="idCamarero">
+                        </label>
+                    </div>
+                    <!--Paso un valor oculto al controlador que actualiza-->
+                     <div class="form-row">     
+                            <input type="hidden" name="action" value="update">
+                    </div>
 
                     <div class="form-row">
                         <label class="form-checkbox">
@@ -83,14 +89,14 @@
 
                 </div>
 
-                <a href="index.htm" class="form-log-in-with-existing">Estas registrado? Entra aqui &rarr;</a>
+                <a href="index.html" class="form-log-in-with-existing">Estas registrado? Entra aqui &rarr;</a>
 
             </div>
 
             <div class="form-sign-in-with-social">
 
                 <div class="form-row form-title-row">
-                    <span class="form-title">Menu Administracion</span>
+                    <span class="form-title">Administracion</span>
                 </div>
 
                 <a href="#" class="form-google-button">Baja Camarero</a>

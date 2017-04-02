@@ -7,21 +7,19 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Altas</title>
+        <title>Actualizacion de Camareros</title>
 
         <link rel="stylesheet" href="assets/demo.css">
         <link rel="stylesheet" href="assets/form-register.css">
 
     </head>
     <ul>
-        <li><a href="index.html">Indice</a></li>
-        <li><a href="form-camarero.html" class="active">Alta Camarero</a></li>
-        <li><a href="form-camarero.html" class="active">Alta Cocinero</a></li>
-        <li><a href="form-login.html">Login</a></li>
-        <li><a href="form-mini.html">Mini</a></li>
-        <li><a href="form-labels-on-top.html">Labels on Top</a></li>
-        <li><a href="form-validation.html">Validation</a></li>
-        <li><a href="form-search.html">Search</a></li>
+        <li><a href="gestion.htm">Indice</a></li>
+        <li><a href="insertarCamarero.html">Dar de Alta</a></li>
+        <li><a href="mostrarCamarero.jsp">Listado de Camareros</a></li>
+        <li><a href="actualizarCamarero.html" class="active">Actualizar datos</a></li>
+        <li><a href="borrarCamarero.html">Dar de Baja</a></li>
+
     </ul>
 
 
@@ -29,21 +27,14 @@
 
         <!-- You only need this form and the form-register.css -->
 
-        <form class="form-register" method="post" action="/Restaurante/formularioServletCamarero">
+        <form class="form-register" method="post" action="ControladorServletCamarero">
 
             <div class="form-register-with-email">
 
                 <div class="form-white-background">
 
                     <div class="form-title-row">
-                        <h1>Alta Camarero</h1>
-                    </div>
-
-                    <div class="form-row">
-                        <label>
-                            <span>IdCamarero</span>
-                            <input type="text" name="idCamarero">
-                        </label>
+                        <h1>Actualizacion de Camareros</h1>
                     </div>
 
                     <div class="form-row">
@@ -59,6 +50,7 @@
                             <input type="text" name="apellido">
                         </label>
                     </div>
+
                     <div class="form-row">
                         <label>
                             <span>Especialidad</span>
@@ -71,31 +63,43 @@
                     </div>
 
                     <div class="form-row">
+                        <label>
+                            <span>IdCamarero</span>
+                            <input type="int" name="idCamarero">
+                        </label>
+                    </div>
+
+                    <!--Paso un valor oculto al controlador (actualizar)-->
+                    <div class="form-row">     
+                        <input type="hidden" name="action" value="actualizar">
+                    </div>
+
+                    <div class="form-row">
                         <label class="form-checkbox">
                             <input type="checkbox" name="checkbox" checked>
-                            <span>Aceptar <a href="#">Volver al index</a></span>
+                            <span>Aceptar <a href="#"> Volver al Index</a></span>
                         </label>
                     </div>
 
                     <div class="form-row">
-                        <button type="submit">Register</button>
+                        <button type="submit">Registrar</button>
                     </div>
 
                 </div>
 
-                <a href="index.html" class="form-log-in-with-existing">¿Estas registrado? Entra aqui &rarr;</a>
+                <a href="index.htm" class="form-log-in-with-existing">Estas registrado? Entra aqui &rarr;</a>
 
             </div>
 
             <div class="form-sign-in-with-social">
 
                 <div class="form-row form-title-row">
-                    <span class="form-title">Menu Administracion</span>
+                    <span class="form-title">Contacto</span>
                 </div>
 
-                <a href="#" class="form-google-button">Baja Camarero</a>
-                <a href="#" class="form-facebook-button">Buscar</a>
-                <a href="#" class="form-twitter-button">Actualizar</a>
+                <a href="#" class="form-google-button">Google</a>
+                <a href="#" class="form-facebook-button">Facebook</a>
+                <a href="#" class="form-twitter-button">Twitter</a>
 
             </div>
 

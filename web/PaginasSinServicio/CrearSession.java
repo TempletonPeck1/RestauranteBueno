@@ -19,7 +19,7 @@ public class CrearSession extends HttpServlet {
         HttpSession sesionRestaurante = request.getSession(true);
 
         Camarero ultimo_camarero = new Camarero();
-        ultimo_camarero.setIdCamarero("11");
+        ultimo_camarero.setIdCamarero(11);
         ultimo_camarero.setNombre("Luna");
         ultimo_camarero.setApellido("Lunera");
         ultimo_camarero.setEspecialidad("Terrraza");

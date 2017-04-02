@@ -31,7 +31,7 @@ public class DaoCocinero {
 
     }
 
-    public static void actualizarCocinero(int idCocinero, String nombre, String apellido, String especialidad) throws ClassNotFoundException, SQLException {
+    public static void actualizarCocinero(String nombre, String apellido, String especialidad, int idCocinero) throws ClassNotFoundException, SQLException {
 
         Connection conexion = Conexion.abrirConexion();
         Statement sentencia = conexion.createStatement();
@@ -44,9 +44,20 @@ public class DaoCocinero {
         actualizar.setString(3, especialidad);
         actualizar.setInt(4, idCocinero);
         //Execute update devuelve el numero de filas afectadas
-        int filasAfectadas = actualizar.executeUpdate(consultaSQL);
+        int filasAfectadas = actualizar.executeUpdate();
         System.out.println("Filas afectadas: " + filasAfectadas);
 
+    }
+    
+     public static void borrarCocinero(int idCocinero) throws ClassNotFoundException, SQLException {
+
+        Connection conexion = Conexion.abrirConexion();
+        String consultaSQL = "delete from cocinero where idCocinero=?";
+        PreparedStatement borrar = conexion.prepareStatement(consultaSQL);
+        borrar.setInt(1, idCocinero);
+        //Execute update devuelve el numero de filas afectadas
+        int filasAfectadas = borrar.executeUpdate();
+        System.out.println("Filas afectadas: " + filasAfectadas);
     }
 
 }

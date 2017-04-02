@@ -26,12 +26,24 @@ public class ControladorServletCamarero extends HttpServlet {
         if (log == true) {
             //recupera el action del formulario
             String action = request.getParameter("action");
-            if (action.contains("update")) {
-                BoCamarero.procesarActualizarCamarero(request, response);
-            } else {
+
+            if (action.contains("insertar")) {
                 BoCamarero.procesarInsertarCamarero(request, response);
+                response.sendRedirect("mostrarCamarero.jsp");
             }
+
+            if (action.contains("actualizar")) {
+                BoCamarero.procesarActualizarCamarero(request, response);
+                response.sendRedirect("mostrarCamarero.jsp");
+            }
+
+            if (action.contains("borrar")) {
+                BoCamarero.procesarBorrarCamarero(request, response);
+                response.sendRedirect("mostrarCamarero.jsp");
+            }
+
         } else {
+
             response.sendRedirect("login.html");
         }
     }

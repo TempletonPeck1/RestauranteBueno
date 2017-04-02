@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     font: bold 14px sans-serif;
-    background-color: #F3F3F3
+    background-color: #f3f3f3
 }
 
 body {
@@ -31,7 +31,7 @@ a:hover, a:active {
 h2 {
     /*font-size: 1.2em;*/
     font-variant: small-caps;
-    color: #c84d4d;
+    color: #6cc606;
 }
 
 h1 {
@@ -47,7 +47,7 @@ p {
 em {
     font-weight: bold;
     font-style: normal;
-    color: #c84d4d;
+    color: #6cc606;
 }
 
 strong {	
@@ -71,7 +71,7 @@ strong {
 #shadow {
     background: url(images/bg_content.gif) repeat-y;
     height: auto;
-    padding: 0 1px 1px 1px;
+    padding: 0 5px 1px 5px;
 }
 
 /* MENU */
@@ -81,9 +81,9 @@ strong {
     background: url(images/menu.gif) repeat-x;
     font:bold 16px sans-serif;
     text-align: center;
-    padding: 10px;
+    padding: 20px;
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 75px;
     border-bottom: 5px solid #EAEAEA;
   /*  background-color: #FFF;*/
 }
@@ -151,8 +151,7 @@ ul a{
 }
 
 #bienvenidos{
-    font: bold 25px sans-serif;
-     text-align:center;
+    font: bold 16px sans-serif;
 }
 
 /* END MENU */
@@ -212,7 +211,7 @@ ul a{
 
 
 #content {
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 #vertical_barr {
@@ -223,7 +222,7 @@ ul a{
 
 #content div {
     float:left;
-    width: 350px;
+    width: 400px;
     padding: 0 30px 0 30px;
 }
 
@@ -236,7 +235,7 @@ ul a{
 }
 
 #content div li a:link, #content div li a:visited, #content div li a:active, #content div li a:hover {
-    color: #c84d4d;
+    color: #6cc606;
     font-weight: bold;
 }
 

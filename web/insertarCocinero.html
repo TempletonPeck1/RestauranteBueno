@@ -7,20 +7,19 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Actualizaciones Camarero</title>
+	<title>Alta de Cocineros</title>
 
 	<link rel="stylesheet" href="assets/demo.css">
 	<link rel="stylesheet" href="assets/form-register.css">
 
 </head>
     <ul>
-        <li><a href="index.htm">Indice</a></li>
-        <li><a href="registroCamarero.html" class="active">Actualizar Camarero</a></li>
-        <li><a href="login.html">Login</a></li>
-       <!--<li><a href="form-mini.html">Mini</a></li>
-        <li><a href="form-labels-on-top.html">Labels on Top</a></li>
-        <li><a href="form-validation.html">Validation</a></li>
-        <li><a href="form-search.html">Search</a></li>-->
+        <li><a href="gestion.htm">Indice</a></li>
+        <li><a href="insertarCocinero.html" class="active">Dar de Alta</a></li>
+        <li><a href="mostrarCocinero.jsp">Listado de Cocineros</a></li>
+        <li><a href="actualizarCocinero.html">Actualizar datos</a></li>
+        <li><a href="borrarCocinero.html">Dar de Baja</a></li>
+       
     </ul>
 
 
@@ -28,14 +27,21 @@
 
         <!-- You only need this form and the form-register.css -->
 
-        <form class="form-register" method="post" action="ControladorServletCamarero">
+        <form class="form-register" method="post" action="ControladorServletCocinero">
 
             <div class="form-register-with-email">
 
                 <div class="form-white-background">
 
                     <div class="form-title-row">
-                        <h1>Actualizar Camarero</h1>
+                        <h1>Alta de Cocineros</h1>
+                    </div>
+
+                    <div class="form-row">
+                        <label>
+                            <span>IdCocinero</span>
+                            <input type="int" name="idCocinero">
+                        </label>
                     </div>
 
                     <div class="form-row">
@@ -52,30 +58,21 @@
                         </label>
                     </div>
                     
-                       <div class="form-row">
+                     <div class="form-row">
                         <label>
                             <span>Especialidad</span>
                             <select id="especialidad" name="especialidad">
-                                <option>Barra</option>
-                                <option>Comedor</option>
-                                <option>Terraza</option>
+                                <option>Cocina de Autor</option>
+                                <option>Cocina Tradicional</option>              
                             </select>
                         </label>
                     </div>
-                    
-                    
-                    
-                    <div class="form-row">
-                        <label>
-                            <span>IdCamarero</span>
-                            <input type="text" name="idCamarero">
-                        </label>
-                    </div>
-                    <!--Paso un valor oculto al controlador que actualiza-->
-                     <div class="form-row">     
-                            <input type="hidden" name="action" value="update">
-                    </div>
 
+                      <!--Paso un valor oculto al controlador (insertar)-->
+                    <div class="form-row">     
+                        <input type="hidden" name="action" value="insertar">
+                    </div>
+                    
                     <div class="form-row">
                         <label class="form-checkbox">
                             <input type="checkbox" name="checkbox" checked>
@@ -89,19 +86,19 @@
 
                 </div>
 
-                <a href="index.html" class="form-log-in-with-existing">Estas registrado? Entra aqui &rarr;</a>
+                <a href="index.htm" class="form-log-in-with-existing">Estas registrado? Entra aqui &rarr;</a>
 
             </div>
 
             <div class="form-sign-in-with-social">
 
                 <div class="form-row form-title-row">
-                    <span class="form-title">Administracion</span>
+                    <span class="form-title">Contacto</span>
                 </div>
 
-                <a href="#" class="form-google-button">Baja Camarero</a>
-                <a href="#" class="form-facebook-button">Buscar</a>
-                <a href="#" class="form-twitter-button">Actualizar Camarero</a>
+                <a href="#" class="form-google-button">Google</a>
+                <a href="#" class="form-facebook-button">Facebook</a>
+                <a href="#" class="form-twitter-button">Twitter</a>
 
             </div>
 
