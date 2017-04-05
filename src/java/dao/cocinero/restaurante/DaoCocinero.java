@@ -1,11 +1,15 @@
 package dao.cocinero.restaurante;
 
+import entidades.Camarero;
+import entidades.Cocinero;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import utilidades.Conexion;
+import utilidades.ExcepcionesBD;
 
 public class DaoCocinero {
 
@@ -48,8 +52,8 @@ public class DaoCocinero {
         System.out.println("Filas afectadas: " + filasAfectadas);
 
     }
-    
-     public static void borrarCocinero(int idCocinero) throws ClassNotFoundException, SQLException {
+
+    public static void borrarCocinero(int idCocinero) throws ClassNotFoundException, SQLException {
 
         Connection conexion = Conexion.abrirConexion();
         String consultaSQL = "delete from cocinero where idCocinero=?";
@@ -58,6 +62,27 @@ public class DaoCocinero {
         //Execute update devuelve el numero de filas afectadas
         int filasAfectadas = borrar.executeUpdate();
         System.out.println("Filas afectadas: " + filasAfectadas);
+    }
+
+    public static ArrayList<Cocinero> listarCocinero() throws ClassNotFoundException, SQLException {
+
+        Connection conexion = Conexion.abrirConexion();
+        String consultaSQL = "select idCocinero,nombre,apellido, especialidad from cocinero";
+        PreparedStatement sentencia = conexion.prepareStatement(consultaSQL);
+        ResultSet rs = sentencia.executeQuery(consultaSQL);
+        ArrayList<Cocinero> lista_cocineros = new ArrayList<Cocinero>();
+        try {
+            while (rs.next()) {
+                lista_cocineros.add(new Cocinero(Integer.parseInt(rs.getString("idCocinero")),
+                        rs.getString("nombre"),
+                        rs.getString("apellido"),
+                        rs.getString("especialidad")));
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            throw new ExcepcionesBD("error en la insercion de datos");
+        }
+        return lista_cocineros;
     }
 
 }

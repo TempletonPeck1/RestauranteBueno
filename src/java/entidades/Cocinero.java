@@ -9,6 +9,19 @@ public class Cocinero {
     private String apellido;
     private String especialidad;
 
+    public Cocinero() {
+    }
+
+    
+    public Cocinero(int idCocinero, String nombre, String apellido, String especialidad) {
+        this.idCocinero = idCocinero;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.especialidad = especialidad;
+    }
+
+    
+    
     public int getIdCocinero() {
         return idCocinero;
     }

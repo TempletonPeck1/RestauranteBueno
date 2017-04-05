@@ -4,6 +4,8 @@ import dao.camarero.restaurante.DaoCamarero;
 import entidades.Camarero;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -42,4 +44,16 @@ public class BoCamarero {
         //response.sendRedirect("mostrarAlumno.jsp");
     }
 
+    public static void procesarListarCamarero(HttpServletRequest request,HttpServletResponse response){
+        
+        try {
+            Camarero waiter=new Camarero();
+            DaoCamarero.listarCamareros();
+            //cambiar los loooger
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(BoCamarero.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(BoCamarero.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }

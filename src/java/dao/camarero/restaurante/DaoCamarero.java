@@ -1,11 +1,14 @@
 package dao.camarero.restaurante;
 
+import entidades.Camarero;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import utilidades.Conexion;
+import utilidades.ExcepcionesBD;
 
 public class DaoCamarero {
 
@@ -65,6 +68,26 @@ public class DaoCamarero {
         
     }
     
+     public static ArrayList<Camarero> listarCamareros() throws ClassNotFoundException, SQLException {
+
+        Connection conexion = Conexion.abrirConexion();
+        String consultaSQL = "select idCamarero,nombre,apellido, especialidad from camarero";
+        PreparedStatement sentencia = conexion.prepareStatement(consultaSQL);
+        ResultSet rs = sentencia.executeQuery(consultaSQL);
+        ArrayList<Camarero> lista_camareros = new ArrayList<Camarero>();
+        try {
+            while (rs.next()) {
+                lista_camareros.add(new Camarero(Integer.parseInt(rs.getString("idCamarero")),
+                        rs.getString("nombre"),
+                        rs.getString("apellido"),
+                        rs.getString("especialidad")));
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            throw new ExcepcionesBD("error en la insercion de datos");
+        }
+        return lista_camareros;
+    }
 
 }
 

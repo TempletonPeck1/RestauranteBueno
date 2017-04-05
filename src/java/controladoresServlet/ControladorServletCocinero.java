@@ -29,17 +29,17 @@ public class ControladorServletCocinero extends HttpServlet {
 
             if (action.contains("insertar")) {
                 BoCocinero.procesarInsertarCocinero(request, response);
-                response.sendRedirect("mostrarCocinero.jsp");
+                response.sendRedirect("ServletMostrarCocinero");
             }
 
             if (action.contains("actualizar")) {
                 BoCocinero.procesarActualizarCocinero(request, response);
-                response.sendRedirect("mostrarCocinero.jsp");
+                response.sendRedirect("ServletMostrarCocinero");
             }
 
             if (action.contains("borrar")) {
                 BoCocinero.procesarBorrarCocinero(request, response);
-                response.sendRedirect("mostrarCocinero.jsp");
+                response.sendRedirect("ServletMostrarCocinero");
             }
             
         } else {

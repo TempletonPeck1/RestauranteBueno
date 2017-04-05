@@ -29,17 +29,17 @@ public class ControladorServletCamarero extends HttpServlet {
 
             if (action.contains("insertar")) {
                 BoCamarero.procesarInsertarCamarero(request, response);
-                response.sendRedirect("mostrarCamarero.jsp");
+                response.sendRedirect("ServletMostrarCamarero");
             }
 
             if (action.contains("actualizar")) {
                 BoCamarero.procesarActualizarCamarero(request, response);
-                response.sendRedirect("mostrarCamarero.jsp");
+                response.sendRedirect("ServletMostrarCamarero");
             }
 
             if (action.contains("borrar")) {
                 BoCamarero.procesarBorrarCamarero(request, response);
-                response.sendRedirect("mostrarCamarero.jsp");
+                response.sendRedirect("ServletMostrarCamarero");
             }
 
         } else {

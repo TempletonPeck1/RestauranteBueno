@@ -12,6 +12,15 @@ public class Camarero {
     public Camarero() {
     }
 
+    public Camarero(int idCamarero, String nombre, String apellido, String especialidad) {
+        this.idCamarero = idCamarero;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.especialidad = especialidad;
+    }
+    
+    
+
     
     public int getIdCamarero() {
         return idCamarero;
