@@ -20,8 +20,8 @@ public class CrearSession extends HttpServlet {
 
         Camarero ultimo_camarero = new Camarero();
         ultimo_camarero.setIdCamarero(11);
-        ultimo_camarero.setNombre("Luna");
-        ultimo_camarero.setApellido("Lunera");
+        ultimo_camarero.setNombre("Nacho");
+        ultimo_camarero.setApellido("Diez");
         ultimo_camarero.setEspecialidad("Terrraza");
 
         //HttpSession misession = request.getSession(true);
